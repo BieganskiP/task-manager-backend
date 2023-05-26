@@ -42,7 +42,7 @@ Make sure to replace your-secret-key with your own secret key for JWT token gene
 
 The server will start running on the specified port (default: 3000) and connect to the MongoDB database.
 
-##User Management API
+## User Management API
 
 The User Management API provides the following endpoints:
 
