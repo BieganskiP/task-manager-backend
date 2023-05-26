@@ -22,9 +22,14 @@ const avatarDir = path.join(process.cwd(), "public", "avatars");
 
 router.post("/signup", async (req, res) => {
   try {
-    const { error } = userValidationSchema.validate(req.body);
+    const { error } = userValidationSchema.validate(req.body, {
+      messages: {
+        "string.pattern.base":
+          "Password must be at least 8 characters long and contain one uppercase letter, one lowercase letter, one number, and one special symbol",
+      },
+    });
     if (error) {
-      res.status(400).json({ message: error.message });
+      res.status(400).json({ message: error.details[0].message });
       return;
     }
 
