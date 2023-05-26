@@ -7,6 +7,7 @@ const usersRouter = require("./controllers/UserController");
 const tasksRouter = require("./controllers/TaskController");
 const app = express();
 const formatsLogger = app.get("env") === "development" ? "dev" : "short";
+const port = 3000;
 
 connectDB();
 app.use(cors());
@@ -28,7 +29,7 @@ app.use((err, req, res, next) => {
 
 module.exports = app;
 
-const port = 3000;
+
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });
