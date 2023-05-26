@@ -19,26 +19,26 @@ To get started with the User and Task Management APIs, follow these steps:
 
 1. Clone the repository:
 
-`git clone https://github.com/your-username/user-task-management-api.git
-cd user-task-management-api`
+``git clone https://github.com/your-username/user-task-management-api.git
+cd user-task-management-api``
 
 2. Install the dependencies:
 
-`npm install`
+``npm install``
 
 Configure the environment variables:
 Create a .env file in the root directory of the project and provide the following variables:
 
-`EMAIL_SENDER=Your-verified-in-sendgrid.
+``EMAIL_SENDER=Your-verified-in-sendgrid.
 PORT=3000
 MONGO_URL=your-MongoDB-url
-JWT_SECRET=your-secret-key`
+JWT_SECRET=your-secret-key``
 
 Make sure to replace your-secret-key with your own secret key for JWT token generation.
 
 4. Start the server:
 
-`npm start`
+``npm start``
 
 The server will start running on the specified port (default: 3000) and connect to the MongoDB database.
 
