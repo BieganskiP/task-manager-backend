@@ -103,10 +103,7 @@ router.post("/login", async (req, res) => {
     user.token = token;
 
     await user.save();
-    if (!user.verify) {
-      res.status(401).json({ message: "Email not verified" });
-      return;
-    }
+
     res.status(200).json({
       token: user.token,
       user: {
